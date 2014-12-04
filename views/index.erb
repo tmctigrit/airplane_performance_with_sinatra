@@ -1,0 +1,114 @@
+<!-- Get and display the number of diff airlines in dataset -->
+<% @result_entries.each do |hashr| %>
+  <% hashr.each do |k, v| %>
+  How many different airlines are represented in this dataset? <%= v %>
+  <% end %>
+<% end %>
+
+<br/>
+<br/>
+
+<!-- Get and display the airline with the most delayed flights -->
+<% @airline_delayed_values = [] %>
+
+<% @delayed_entries.each do |k, v|%>
+  <% @airline_delayed_values.push(v) %>
+<% end %>
+
+Which airline had the largested quantity of delayed arriving flights?
+<%= @airline_delayed_values[0] %> - <%= @airline_delayed_values[1] %> delayed flights
+
+<br/>
+<br/>
+<!-- Get and display the airline with the least delayed flights -->
+
+<% @airline_least_delayed = [] %>
+
+<% @few_delayed.each do |k, v|%>
+  <% @airline_least_delayed.push(v) %>
+<% end %>
+
+Which airline had the fewest quantity of delayed arriving flights?
+<%= @airline_least_delayed[0] %> - <%= @airline_least_delayed[1] %> delayed flights
+
+<br/>
+<br/>
+
+<!-- Get and display the departing AIRPORT with the most delayed flights -->
+
+<% @airport_most_delayed = [] %>
+
+<% @air_most_delayed.each do |k, v|%>
+  <% @airport_most_delayed.push(v) %>
+<% end %>
+
+Which departing airport had the highest number of delayed flights?
+<%= @airport_most_delayed[0] %> - <%= @airport_most_delayed[1] %> delayed flights
+
+<br/>
+<br/>
+
+<!-- Get and display the departing AIRPORT with the fewest delayed flights -->
+
+<% @airport_fewest_delayed = [] %>
+
+<% @air_few_delayed.each do |k, v|%>
+  <% @airport_fewest_delayed.push(v) %>
+<% end %>
+
+Which departing airport had the fewest number of delayed flights?
+<%= @airport_fewest_delayed[0] %> - <%= @airport_fewest_delayed[1] %> delayed flights
+
+<br/>
+<br/>
+
+
+<!-- Get and display the arriving AIRPORT with the most delayed flights -->
+
+<% @arriving_air_most_del = [] %>
+
+<% @arr_air_most_delayed.each do |k, v|%>
+  <% @arriving_air_most_del.push(v) %>
+<% end %>
+
+Which arriving airport had the highest number of delayed flights?
+<%= @arriving_air_most_del[0] %> - <%= @arriving_air_most_del[1] %> delayed flights
+
+<br/>
+<br/>
+
+
+<!-- Get and display the arriving AIRPORT with the fewest delayed flights -->
+
+<% @arriving_air_few_del = [] %>
+
+<% @arr_air_few_delayed.each do |k, v|%>
+  <% @arriving_air_few_del.push(v) %>
+<% end %>
+
+Which arriving airport had the fewest number of delayed flights?
+<%= @arriving_air_few_del[0] %> - <%= @arriving_air_few_del[1] %> delayed flights
+
+<br/>
+<br/>
+
+<!-- Get and display the number of diff airlines in dataset -->
+<% @avg_min_late.each do |min| %>
+  <% min.each do |k, v| %>
+  What was the average number of minutes late across all airlines? <%= v %>
+  <% end %>
+<% end %>
+
+<br/>
+<br/>
+
+<!-- Get and display the number of diff airlines in dataset -->
+What was the average number of minutes late for each airline? <br/>
+<% @avg_late_all.each do |min| %>
+  <% min.each do |key| %>
+  <%= key %>
+  <% end %>
+<% end %>
+
+<br/>
+<br/>
